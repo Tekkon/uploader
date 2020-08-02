@@ -2,7 +2,7 @@
 #lock "~> 3.10.1"
 
 set :application, "uploader"
-set :repo_url, "git@gitlab.domoidostavim.ru:dd/domoidostavim.ru.git"
+set :repo_url, "git@github.com:Tekkon/uploader.git"
 
 # Default branch is :master
 ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
@@ -11,5 +11,3 @@ ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 set :deploy_to, "/srv/#{fetch(:application)}"
 
 set :rvm_type, :ruby
-
-set :stages, %w(production)
