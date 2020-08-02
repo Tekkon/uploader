@@ -10,6 +10,6 @@ ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/srv/#{fetch(:application)}"
 
+set :rvm_bin_path, '/usr/local/rvm/bin'
 set :rvm_type, :ruby
 set :default_shell, "/bin/bash -l"
-set :rvm_custom_path, '/usr/local/rvm'
