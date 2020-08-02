@@ -11,3 +11,4 @@ ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 set :deploy_to, "/srv/#{fetch(:application)}"
 
 set :rvm_type, :ruby
+set :default_shell, "/bin/bash -l"
