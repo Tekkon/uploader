@@ -6,9 +6,8 @@ class UploadController < ApplicationController
   end
 
   def upload
-    uploaded_io = params[:file]
-    File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
-      file.write(uploaded_io.read)
+    File.open(Rails.root.join('public', 'uploads', params[:filename]), 'wb') do |file|
+      file.write(params[:body])
     end
   end
 end
