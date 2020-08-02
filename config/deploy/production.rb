@@ -1,4 +1,4 @@
-server '89.223.24.167', user: 'root' #, roles: %w{app db web cron}
+server '89.223.24.167', user: 'deploy', roles: %w{app db web}
 
 set :application, "uploader"
 set :deploy_to, -> { "/srv/#{fetch(:application)}" }
