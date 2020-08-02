@@ -12,3 +12,4 @@ set :deploy_to, "/srv/#{fetch(:application)}"
 
 set :rvm_type, :ruby
 set :default_shell, "/bin/bash -l"
+set :rvm_custom_path, '/usr/local/rvm'
